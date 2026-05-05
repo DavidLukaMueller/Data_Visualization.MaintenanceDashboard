@@ -7,7 +7,7 @@ This project consists of two distinct interfaces designed for different operatio
 1. **Live Dashboard:** A low-fidelity, high-contrast screen focused only on critical, real-time streaming information.
 2. **Executive Summary:** A high-fidelity, in-depth static dashboard providing historical context and actionable maintenance reports.
 
-![Overview: Live Dashboard](IMAGE_LINK_HERE)
+![Overview: Live Dashboard](imgs/live/00_Live_Raw.png)
 
 ---
 
@@ -31,14 +31,14 @@ To ensure a seamless user experience, a strict and consistent color language is 
 *   🟨 **Yellow:** Warning phase; start preparing for maintenance.
 *   🟥 **Red:** Critical phase; immediate action required. *(In Swaps: Tool broke before it was swapped).*
 
-![Overview: Summary Dashboard](IMAGE_LINK_HERE)
+![Overview: Summary Dashboard](imgs/Summary/00_Summary_Raw.png)
 
 ---
 
 ## 📡 View 1: Live Dashboard
 The Live Dashboard monitors the machine in real-time, focusing only on the data an operator needs at a glance.
 
-![Live Dashboard Sections Breakdown](IMAGE_LINK_HERE)
+![Live Dashboard Sections Breakdown](imgs/live/01_Summary_Sections.png)
 
 ### Core Functionality
 The dashboard is split into five distinct functional areas:
@@ -49,11 +49,11 @@ The dashboard is split into five distinct functional areas:
 5. **Hotkey Controls:** Footer text detailing how to pause the feed `[Spacebar]` or generate a report `[Enter]`.
 
 #### Information Guide
-![Info Guide/Question Mark Tooltip](IMAGE_LINK_HERE)
+![Info Guide/Question Mark Tooltip](imgs/Live_Guide.png)
 Clicking the `?` button opens a floating, high-contrast panel explaining the dashboard's visual elements, allowing new operators to quickly understand the interface without leaving the screen.
 
 ### 📈 Tool Wear Trajectory
-![Tool Wear Chart](IMAGE_LINK_HERE)
+![Tool Wear Chart](imgs/live/02_Live_Wear.png)
 *   **Visual (UX/Layout):** To prevent center-screen clutter, the HUDs (floating info boxes) are anchored to the top-left and bottom-right corners—the furthest points from the central focus area of the chart.
 *   **Functional (Data Logic):** 
     *   The **Top HUD** calculates and displays the current state and estimated steps until a swap is needed.
@@ -62,7 +62,7 @@ Clicking the `?` button opens a floating, high-contrast panel explaining the das
     *   The **Mean Prediction** (dashed line) is a moving average used to estimate the exact maintenance point, while the **Uncertainty Zone** projects a cone based on raw historical fluctuations to show worst-case and best-case failure scenarios.
 
 ### ⚙️ Overstrain Analysis
-![Overstrain Analysis Chart](IMAGE_LINK_HERE)
+![Overstrain Analysis Chart](imgs/live/03_Live_Overstrain.png)
 *   **Visual (UX/Layout):** Because the critical data (the failure curve) occupies the entire right side of the chart, the HUD is intentionally anchored to the top-left to avoid obscuring the most important visual information.
 *   **Functional (Data Logic):** 
     *   The **Overstrain Curve** plots the exact mathematical threshold where the tool will snap due to excessive force. 
@@ -70,7 +70,7 @@ Clicking the `?` button opens a floating, high-contrast panel explaining the das
     *   The **Current State** (large white dot) shows exactly where the machine is now, leaving a trail of **Recent Path** (grey dots) to show historical movement.
 
 ### 📊 Historical Interruptions
-![Historical Interruptions Bar Chart](IMAGE_LINK_HERE)
+![Historical Interruptions Bar Chart](imgs/live/04_Live_Historical.png)
 *   **Visual (UX/Layout):** Using the distinct categorical color palette discussed above. Because the chart is wide, faint horizontal gridlines are essential to help the eye track the bar height to the Y-axis.
 *   **Functional (Data Logic):** Allows operators to quickly spot anomalies. If a specific error (like Power Faults) happens unusually often, the operator can notice the trend immediately without having to stop the machine and generate a full summary report.
 
@@ -79,7 +79,7 @@ Clicking the `?` button opens a floating, high-contrast panel explaining the das
 ## 📋 View 2: Executive Summary
 The Executive Summary is a static, printable report generated on demand. It provides a deep dive into the machine's health, history, and status.
 
-![Summary Dashboard Sections Breakdown](IMAGE_LINK_HERE)
+![Summary Dashboard Sections Breakdown](imgs/Summary/01_Summary_Sections.png)
 
 It is divided into 6 distinct analytical areas:
 1. **Historical Failures:** Grouped bar chart of past breakdowns.
@@ -90,20 +90,20 @@ It is divided into 6 distinct analytical areas:
 6. **Deep Dive Viz:** Clean, static versions of the Wear and Overstrain charts for formal reference.
 
 ### 📊 Historical Failures (Grouped)
-![Historical Failures Summary Chart](IMAGE_LINK_HERE)
+![Historical Failures Summary Chart](imgs/Summary/02_Historical_Failures.png)
 *   **Visual (UX/Layout):** The chart dynamically scales based on the tallest column. The legend is pushed to the absolute top of the chart to clear space, and is ordered to perfectly align with the columns below it. Each bar features an exact numerical label for precise reporting.
 *   **Functional (Data Logic):** Instead of raw tracking, failures are logically grouped into **Machine Failures** (Power, Temp, Random) and **Tool Failures** (Wear, Strain). This allows management to instantly diagnose whether they have an electrical/environmental problem or a mechanical tooling problem.
 
 ### 🚦 Current Status
-![3 Modes of the Status Screen](IMAGE_LINK_HERE)
+![3 Modes of the Status Screen](imgs/Summary/03_TLDR.png)
 *   **Visual & Functional:** This is the highest-priority element on the board. Designed for supervisors who only have 5 seconds to read the report. It dynamically changes text and background color (Green ➔ Yellow ➔ Red) depending on the severity of the situation, instantly communicating if a swap needs to be done immediately.
 
 ### ⏳ Current Tool Progress
-![3 Modes of Tool Progress](IMAGE_LINK_HERE)
+![3 Modes of Tool Progress](imgs/Summary/04_Loading.png)
 *   **Visual & Functional:** A simplified abstraction of the complex charts. It acts as a "loading bar." Once the tool passes the 150-minute mark, the bar turns Yellow. Once it crosses the 200-minute mark, it turns Red, signaling an immediate required swap.
 
 ### 🔄 End-of-Life Swaps
-![End of Life Swaps Chart](IMAGE_LINK_HERE)
+![End of Life Swaps Chart](imgs/Summary/05_End_of_Life_Swaps.png)
 *   **Visual & Functional:** This chart acts as a magnifying glass, zooming in *only* on the 150–260 minute mark where critical maintenance occurs. 
     *   A **Green Bar** proves a successful, proactive swap before failure.
     *   A **Red Bar** indicates a reactive swap (the tool broke), explicitly labeling which failure type caused the breakdown.
