@@ -7,7 +7,7 @@ This project consists of two distinct interfaces designed for different operatio
 1. **Live Dashboard:** A low-fidelity, high-contrast screen focused only on critical, real-time streaming information.
 2. **Executive Summary:** A high-fidelity, in-depth static dashboard providing historical context and actionable maintenance reports.
 
-![Overview: Live Dashboard](imgs/live/00_Live_Raw.png)
+![Overview: Live Dashboard](Imgs/live/00_Live_Raw.png)
 
 ---
 
