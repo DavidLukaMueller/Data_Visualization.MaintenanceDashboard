@@ -69,6 +69,11 @@ Clicking the `?` button opens a floating, high-contrast panel explaining the das
     *   The **Warning Zone** acts as an early-warning tripwire. 
     *   The **Current State** (large white dot) shows exactly where the machine is now, leaving a trail of **Recent Path** (grey dots) to show historical movement.
 
+### 🪞 Brushed Data (Wear x Overstrain)
+![Brush](imgs\live\05_Brush.png)
+*   **Vizual (UX/Layout):** To know its the same data you select, the selection and the reflection on the Wear chart are the same color.
+*   **Functional (Data Logic):** Allows operators to find potential patterns by looking at both perspectives of same data.
+
 ### 📊 Historical Interruptions
 ![Historical Interruptions Bar Chart](imgs\live\04_Live_Historical.png)
 *   **Visual (UX/Layout):** Using the distinct categorical color palette discussed above. Because the chart is wide, faint horizontal gridlines are essential to help the eye track the bar height to the Y-axis.
