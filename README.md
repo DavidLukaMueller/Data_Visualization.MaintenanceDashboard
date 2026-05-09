@@ -70,7 +70,7 @@ Clicking the `?` button opens a floating, high-contrast panel explaining the das
     *   The **Current State** (large white dot) shows exactly where the machine is now, leaving a trail of **Recent Path** (grey dots) to show historical movement.
 
 ### 🪞 Brushed Data (Wear x Overstrain)
-![Brush](imgs/live/05_Brush.png)
+![Brush](Imgs/Live/05_Brush.png)
 *   **Vizual (UX/Layout):** To know its the same data you select, the selection and the reflection on the Wear chart are the same color.
 *   **Functional (Data Logic):** Allows operators to find potential patterns by looking at both perspectives of same data.
 
