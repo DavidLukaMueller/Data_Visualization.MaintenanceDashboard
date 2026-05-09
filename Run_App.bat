@@ -1,2 +1,2 @@
 @echo off
-start "" "Script\Predictive Maintenance.exe"
+start "" "Raw\dist\Script\Script.exe"
