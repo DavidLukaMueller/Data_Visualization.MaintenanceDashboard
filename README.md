@@ -20,11 +20,11 @@ To ensure a seamless user experience, a strict and consistent color language is 
 *   **Transparent Orange:** Represents an estimation cone or warning area where operators must pay close attention.
 
 **Failure Type Categorization:**
-*   🟦 **TWF (Tool Wear):** Dark Blue — *Classic blue-collar mechanical wear.*
-*   🟧 **HDF (Heat Dissipation):** Orange — *Signifies dangerous machinery heat.*
-*   🟨 **PWF (Power Fault):** Yellow — *Signifies electricity/power surges.*
-*   🟪 **OSF (Overstrain):** Pink — *Signifies material discoloration due to extreme mechanical stress.*
-*   ⬜ **RNF (Random Failure):** Grey — *Signifies uncertainty or unknown sensor ghosting.*
+*   🟦 **TWF (Tool Wear):** Dark Blue - *Classic blue-collar mechanical wear.*
+*   🟧 **HDF (Heat Dissipation):** Orange - *Signifies dangerous machinery heat.*
+*   🟨 **PWF (Power Fault):** Yellow - *Signifies electricity/power surges.*
+*   🟪 **OSF (Overstrain):** Pink - *Signifies material discoloration due to extreme mechanical stress.*
+*   ⬜ **RNF (Random Failure):** Grey - *Signifies uncertainty or unknown sensor ghosting.*
 
 **Status Indicators (Summary View Specific):**
 *   🟩 **Green:** Optimal operations; everything is running smoothly. *(In Swaps: Tool was swapped safely on time).*
@@ -54,7 +54,7 @@ Clicking the `?` button opens a floating, high-contrast panel explaining the das
 
 ### 📈 Tool Wear Trajectory
 ![Tool Wear Chart](Imgs/Live/02_Live_Wear.png)
-*   **Visual (UX/Layout):** To prevent center-screen clutter, the HUDs (floating info boxes) are anchored to the top-left and bottom-right corners—the furthest points from the central focus area of the chart.
+*   **Visual (UX/Layout):** To prevent center-screen clutter, the HUDs (floating info boxes) are anchored to the top-left and bottom-right corners-the furthest points from the central focus area of the chart.
 *   **Functional (Data Logic):** 
     *   The **Top HUD** calculates and displays the current state and estimated steps until a swap is needed.
     *   The **Bottom HUD** acts as a dynamic legend. 
